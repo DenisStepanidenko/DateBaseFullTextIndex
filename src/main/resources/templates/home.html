@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <script>
+        function authorForm() {
+            const form = document.getElementById("authorForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function titleForm() {
+            const form = document.getElementById("titleForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function yearForm() {
+            const form = document.getElementById("yearForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        function annotationForm() {
+            const form = document.getElementById("annotationForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- Кнопки -->
+<button onclick="authorForm()">Найти книги по автору</button>
+<button onclick="titleForm()">Найти книги по названию</button>
+<button onclick="yearForm()">Найти книги по году издания</button>
+<button onclick="annotationForm()">Найти книги по аннотациям</button>
+
+<form id="authorForm" style="display: none;" th:method="POST" th:action="@{/author}">
+    <label for="author">Введите автора</label>
+    <input type="text" name="nameOfAuthor" id="author">
+
+    <button type="submit" onclick="authorForm()">Найти</button>
+</form>
+
+<form id="titleForm" style="display: none;" th:method="POST" th:action="@{/title}">
+    <label for="title">Введите название</label>
+    <input type="text" name="nameOfBook" id="title">
+
+    <button type="submit" onclick="titleForm()">Найти</button>
+</form>
+
+<form id="yearForm" style="display: none;" th:method="POST" th:action="@{/year}">
+    <label for="year">Введите год</label>
+    <input type="text" name="year" id="year">
+
+    <button type="submit" onclick="yearForm()">Найти</button>
+</form>
+
+<form id="annotationForm" style="display: none;" th:method="POST" th:action="@{/annotation}">
+    <label for="annotation">Введите аннотацию</label>
+    <input type="text" name="annotation" id="annotation">
+    <button type="submit" onclick="annotationForm()">Найти</button>
+</form>
+<br/>
+</body>
+</html>

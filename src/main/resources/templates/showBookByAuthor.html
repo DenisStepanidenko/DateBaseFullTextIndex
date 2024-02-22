@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+<h1 th:text="${author}"> </h1>
+
+<ul th:if="not ${bookDto.getBooks().isEmpty()}">
+    <div  th:each="book : ${bookDto.getBooks()}">
+        <li th:text="${book.getTitle()} + ', ' + ${book.getPublishing()} + ', ' +  ${book.getYear()}"></li>
+    </div>
+</ul>
+
+<span th:if="${bookDto.getBooks().isEmpty()}">Книги данного автора не найдены</span>
+<br/>
+<a href="/home">На главную страницу</a>
+</body>
+</html>
