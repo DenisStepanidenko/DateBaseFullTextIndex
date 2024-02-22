@@ -1,6 +1,6 @@
 package com.example.DataBaseFullTextIndex.dto;
 
-import com.example.model.Book;
+import com.example.DataBaseFullTextIndex.model.Book;
 
 import java.util.List;
 

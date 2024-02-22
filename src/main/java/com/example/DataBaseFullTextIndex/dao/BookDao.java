@@ -2,7 +2,7 @@ package com.example.DataBaseFullTextIndex.dao;
 
 
 import com.example.DataBaseFullTextIndex.dto.BookDto;
-import com.example.model.Book;
+import com.example.DataBaseFullTextIndex.model.Book;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
